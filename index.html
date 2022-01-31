@@ -5,29 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose you'r language</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/style.css">
 </head>
-<body>
+<body id="body" onload="start()">
     <div class="mainContainer">
         <header>
-            <nav>
-                <h1>Popular JS Frameworks </h1>
+            <nav class="mainNavigation">
+                <div class="dropdown mainNavigationDropdown">
+                    <button class="dropdownBtn btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Choose language
+                    </button>
+                    <ul class="dropdown-menu" id="dropdownAdd" aria-labelledby="dropdownMenuButton1">
+                      <div class="linkLangWrapper">
+                                <img width="40" src="/images/israel.png" alt="israel flag">     
+                          <li>
+                                
+                                 <a class="dropdown-item langLink" id="he" href="#">עברית</a>
+                          </li>
+                      </div>
+                      <div class="linkLangWrapper">
+                                <img width="40" src="/images/english1.png" alt="english flag">
+
+                        <li>
+                                <a class="dropdown-item langLink" href="#">English</a>
+                          </li>
+                      </div>
+                      <div class="linkLangWrapper">
+                                <img width="40" src="/images/france.png" alt="france flag">
+
+                        <li>
+                                <a class="dropdown-item langLink" href="#">Français</a>
+                          </li>
+                      </div>
+                      <div class="linkLangWrapper">
+                                <img width="40" src="/images/italien.png" alt="italien flag">
+
+                        <li>
+                                <a class="dropdown-item langLink" href="#">Italiano</a>
+                          </li>
+                      </div>
+                    </ul>
+                  </div>
+                <h1 class="navHeading">Popular Dogs Breads </h1>
             </nav>
         </header>
 
-        <main class="cardsContainer">
-            <div class="card">
-                <img src="#" alt="lang pic">
+        <main class="cardsContainer" id="cardsContainer">
+            <div class="card" id="card">
+                <img class="profilePic" id="profilePic" src="/images/Corgi.png" alt="Corgi illustration">
 
-                <h2>name</h2>
-                <h3>Role</h3>
-                <p>Description</p>
-                <div class="socialLinks">
-                    <img src="#" alt="Facebook">
-                    <img src="#" alt="Linkedin">
-                    <img src="#" alt="gitHub">
+                <div id="breedinfoContainer" class="breedinfoContainer">
+                    <h2 class="breedHeader" id="breedHeader">Welsh Corgi</h2>
+                    <h3 class="subBreedHeader" id="subBreedHeader">herding dog</h3>
+                    <p class="breedInfo" id="breedInfo">The Welsh Corgi is a small type of herding dog that originated in Wales. The name "corgi" is derived from the Welsh words "cor" and "ci" (which is mutated to ‘gi’), meaning "dwarf" and "dog", respectively.</p>
+                </div>
+                <div class="socialLinks" id="socialLinks">
+                    <a href="#"><img width="40" src="/images/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img width="40" src="/images/tiktok.png" alt="TikTok"></a>
+                    <a href="#"><img width="40" src="/images/instagram.png" alt="instagram"></a>
+                </div>
+            </div>
+
+            <div class="card" id="card">
+                <img class="profilePic" id="profilePic" src="/images/akita.png" alt="Corgi illustration">
+
+                <div id="breedinfoContainer" class="breedinfoContainer">
+                    <h2 class="breedHeader" id="breedHeader">Akita </h2>
+                    <h3 class="subBreedHeader" id="subBreedHeader">Spitz Dogs<h3>
+                    <p class="breedInfo" id="breedInfo">The Akita  is a large breed of dog originating from the mountainous regions of northern Japan. There are two separate varieties of Akita: a Japanese strain, commonly called Akita Inu (inu means dog in Japanese) or Japanese Akita, and an American strain, known as the Akita or American Akita.</p>
+                </div>
+                <div class="socialLinks" id="socialLinks">
+                    <a href="#"><img width="40" src="/images/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img width="40" src="/images/tiktok.png" alt="TikTok"></a>
+                    <a href="#"><img width="40" src="/images/instagram.png" alt="instagram"></a>
+                </div>
+            </div>
+
+            <div class="card" id="card">
+                <img class="profilePic" id="profilePic" src="/images/Golden.png" alt="Corgi illustration">
+
+                <div id="breedinfoContainer" class="breedinfoContainer">
+                    <h2 class="breedHeader" id="breedHeader">Golden Retriever</h2>
+                    <h3 class="subBreedHeader" id="subBreedHeader">Retriever and Spaniel dogs</h3>
+                    <p class="breedInfo" id="breedInfo">The Golden Retriever is a British breed of retriever dog of medium size. It is characterised by a gentle and affectionate nature and a striking golden coat. </p>
+                </div>
+                <div class="socialLinks" id="socialLinks">
+                    <a href="#"><img width="40" src="/images/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img width="40" src="/images/tiktok.png" alt="TikTok"></a>
+                    <a href="#"><img width="40" src="/images/instagram.png" alt="instagram"></a>
                 </div>
             </div>
         </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="javaScript/app.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+/* Body Variables */
+$bodyBackgroundColor: #d8d8d8;
+
+/* mainNavigation Variables */
+$mainNavigationWidth: 100vw;
+$mainNavigationHeight: 20vh;
+$mainNavigationBackgroundColor: #f7f7f7;
+$mainNavigationBoxShadow: #a0a0a0;
+$mainNavigationFontSize: 3rem;
+$mainNavigationFontColor: #333;
+$mainNavigationMarginBottom: 10rem;
+
+/* cardsContainer */
+
+/* cardsContainer >>> Card */
+$cardWidth: 80%;
+$cardHeight: 40rem;
+$cardBackgroundColor: #f7f7f7;
+$cardBorderRadius: 1rem;
+$cardPadding: 1rem;
+$cardBreedHeaderFontSize: 3rem;
+$cardSubBreedHeaderFontSize: 2.5rem;
+$cardBreedInfoFontSize: 1.5rem;
+
+/* cardsContainer >>> profilePic */
+
+$profilePicWidth: 11rem;
+$profilePicHeight: 11rem;
+
+
+:root {
+	font-size: 10px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: $bodyBackgroundColor;
+	font-family: "Varela Round", sans-serif;
+}
+.linkLangWrapper {
+	display: flex;
+	flex-flow: row nowrap;
+	margin-bottom: 2rem;
+}
+
+.mainContainer {
+	.mainNavigation {
+		width: $mainNavigationWidth;
+		height: $mainNavigationHeight;
+		background-color: $mainNavigationBackgroundColor;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0rem 0.8rem 2rem $mainNavigationBoxShadow;
+		font-size: $mainNavigationFontSize;
+		text-shadow: 0rem 0.5rem 1.5rem $mainNavigationBoxShadow;
+		color: $mainNavigationFontColor;
+		margin-bottom: $mainNavigationMarginBottom;
+		.navHeading {
+			font-size: $mainNavigationFontSize;
+		}
+		.mainNavigationDropdown {
+			align-self: end;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 5;
+
+			.btn {
+				font-size: 1.5rem;
+			}
+			li {
+				a {
+					font-size: 1.5rem;
+				}
+
+				img {
+					vertical-align: middle;
+				}
+			}
+
+			li:hover {
+				background-color: #444;
+			}
+		}
+	}
+
+	.cardsContainer {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		text-align: center;
+		gap: 8rem;
+
+		.card {
+			width: $cardWidth;
+			height: $cardHeight;
+			background-color: $cardBackgroundColor;
+			border-radius: $cardBorderRadius;
+			justify-self: center;
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			padding: $cardPadding;
+			justify-content: space-evenly;
+
+			.profilePic {
+				border-radius: 50%;
+				width: $profilePicWidth;
+				height: $profilePicHeight;
+				box-shadow: 0rem 0.3rem 2rem #444;
+				object-fit: contain;
+				object-position: center;
+				position: relative;
+				background-color: $cardBackgroundColor;
+				margin: 0;
+				bottom: 20%;
+			}
+			.breedinfoContainer {
+				margin-top: -9rem;
+				.breedHeader {
+					margin-bottom: 1.5rem;
+				}
+				.subBreedHeader {
+					margin-bottom: 1.5rem;
+				}
+			}
+
+			.breedHeader {
+				font-size: $cardBreedHeaderFontSize;
+				margin: 0;
+			}
+
+			.subBreedHeader {
+				font-size: $cardSubBreedHeaderFontSize;
+				margin: 0;
+			}
+
+			.breedInfo {
+				font-size: $cardBreedInfoFontSize;
+				margin: 0;
+			}
+
+			.socialLinks {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				gap: 2rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	:root {
+        font-size: 10px;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: $bodyBackgroundColor;
+        font-family: "Varela Round", sans-serif;
+    }
+    .linkLangWrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 2rem;
+    }
+    
+    .mainContainer {
+        .mainNavigation {
+            width: $mainNavigationWidth;
+            height: $mainNavigationHeight;
+            background-color: $mainNavigationBackgroundColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0rem 0.8rem 2rem $mainNavigationBoxShadow;
+            font-size: $mainNavigationFontSize;
+            text-shadow: 0rem 0.5rem 1.5rem $mainNavigationBoxShadow;
+            color: $mainNavigationFontColor;
+            margin-bottom: $mainNavigationMarginBottom;
+            .navHeading {
+                font-size: $mainNavigationFontSize;
+            }
+            .mainNavigationDropdown {
+                align-self: end;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 5;
+    
+                .btn {
+                    font-size: 1.5rem;
+                }
+                li {
+                    a {
+                        font-size: 1.5rem;
+                    }
+    
+                    img {
+                        vertical-align: middle;
+                    }
+                }
+    
+                li:hover {
+                    background-color: #444;
+                }
+            }
+        }
+    
+        .cardsContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            text-align: center;
+            gap: 0rem;
+    
+            .card {
+                width: $cardWidth;
+                height: $cardHeight;
+                background-color: $cardBackgroundColor;
+                border-radius: $cardBorderRadius;
+                justify-self: center;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                padding: $cardPadding;
+                justify-content: space-evenly;
+    
+                .profilePic {
+                    border-radius: 50%;
+                    width: $profilePicWidth;
+                    height: $profilePicHeight;
+                    box-shadow: 0rem 0.3rem 2rem #444;
+                    object-fit: contain;
+                    object-position: center;
+                    position: relative;
+                    background-color: $cardBackgroundColor;
+                    margin: 0;
+                    bottom: 20%;
+                    margin-bottom: 2.5rem;
+                }
+                .breedinfoContainer {
+                    margin-top: -9rem;
+                    .breedHeader {
+                        margin-bottom: 1.5rem;
+                    }
+                    .subBreedHeader {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+    
+                .breedHeader {
+                    font-size: $cardBreedHeaderFontSize;
+                    margin: 0;
+                }
+    
+                .subBreedHeader {
+                    font-size: $cardSubBreedHeaderFontSize;
+                    margin: 0;
+                }
+    
+                .breedInfo {
+                    font-size: $cardBreedInfoFontSize;
+                    margin: 0;
+                }
+    
+                .socialLinks {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    gap: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
