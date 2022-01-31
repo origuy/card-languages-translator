@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [ Click to See the Site](https://equalizerlandingpageoriguy.netlify.app/)
+- Live Site URL: [ Click to See the Site](https://dogsbreedcardtranslatororiguy.netlify.app/)
 
 ## My process
 
